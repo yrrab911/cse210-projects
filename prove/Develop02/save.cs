@@ -3,26 +3,26 @@ using System.IO;
 
 public class Save
 {
-    public void SaveToFile(string targetFileName)
+    public void SaveToFile(string _targetFileName)
     {
-        string sourceFileName = "myFile.txt";
+        string _sourceFileName = "myFile.txt";
 
-        if (File.Exists(sourceFileName))
+        if (File.Exists(_sourceFileName))
         {
-            string[] lines = File.ReadAllLines(sourceFileName);
-            using (StreamWriter writer = new StreamWriter(targetFileName, false))
+            string[] _lines = File.ReadAllLines(_sourceFileName);
+            using (StreamWriter _writer = new StreamWriter(_targetFileName, false))
             {
-                foreach (string line in lines)
+                foreach (string _line in _lines)
                 {
-                    writer.WriteLine(line);
+                    _writer.WriteLine(_line);
                 }
             }
 
-            Console.WriteLine($"Data has been saved to '{targetFileName}'.");
+            Console.WriteLine($"Data has been saved to '{_targetFileName}'.");
         }
         else
         {
-            Console.WriteLine($"Source file '{sourceFileName}' does not exist.");
+            Console.WriteLine($"Source file '{_sourceFileName}' does not exist.");
         }
     }
 }

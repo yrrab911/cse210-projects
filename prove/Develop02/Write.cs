@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+
 public class Write
 {
-
     public List<string> _list = new List<string>
     {
         "Who is your favorite person?",
@@ -13,7 +13,7 @@ public class Write
         "If you could have a super power what would it be?",
     };
 
-    public object prompt
+    public object _prompt
     {
         get;
         private set;
@@ -21,17 +21,16 @@ public class Write
 
     public void writeToFile()
     {
-        string dateTime = DateTime.Now.ToShortDateString();
-        string fileName = "myFile.txt";
-        using (StreamWriter showfile = new StreamWriter(fileName, true))
+        string _dateTime = DateTime.Now.ToShortDateString();
+        string _fileName = "myFile.txt";
+        using (StreamWriter _showFile = new StreamWriter(_fileName, true))
         {
-            Random random = new Random();
-            int index = random.Next(0, _list.Count);
-            string prompt = _list[index];
-            Console.WriteLine($"{prompt} - ");
-            string response = Console.ReadLine();
-            showfile.WriteLine($"{dateTime} - {prompt} - {response}");
+            Random _random = new Random();
+            int _index = _random.Next(0, _list.Count);
+            string _prompt = _list[_index];
+            Console.WriteLine($"{_prompt} - ");
+            string _response = Console.ReadLine();
+            _showFile.WriteLine($"{_dateTime} - {_prompt} - {_response}");
         }
     }
-
 }

@@ -2,28 +2,25 @@ using System;
 
 public class Load
 {
-
     public string FileName()
     {
         Console.WriteLine("What is the name of your file?");
-        string fileName = Console.ReadLine();
-        return fileName;
+        string _fileName = Console.ReadLine();
+        return _fileName;
     }
 
-    public void LoadFile(string file)
+    public void LoadFile(string _file)
     {
-        string filename = "myFile.txt";
+        string _sourceFileName = "myFile.txt";
 
-        string[] lines = System.IO.File.ReadAllLines(filename);
+        string[] _lines = System.IO.File.ReadAllLines(_sourceFileName);
 
-        using (StreamWriter showFile = new StreamWriter(file, true))
+        using (StreamWriter _showFile = new StreamWriter(_file, true))
         {
-
-            foreach (string line in lines)
+            foreach (string _line in _lines)
             {
-                showFile.WriteLine(line);
+                _showFile.WriteLine(_line);
             }
         }
     }
-
 }

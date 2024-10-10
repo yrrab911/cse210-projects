@@ -2,16 +2,13 @@ using System;
 
 public class Display
 {
-
     public void Read()
     {
-        string fileName = "myFile.txt";
-        string[] lines = System.IO.File.ReadAllLines(fileName);
-        foreach (string line in lines)
+        string _fileName = "myFile.txt";
+        string[] _lines = System.IO.File.ReadAllLines(_fileName);
+        foreach (string _line in _lines)
         {
-            Console.WriteLine(line);
+            Console.WriteLine(_line);
         }
     }
-
-
 }
