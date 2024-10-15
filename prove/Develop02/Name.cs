@@ -1,6 +1,6 @@
 using System;
 
-public class Display
+public class Name
 {
     public void Read()
     {

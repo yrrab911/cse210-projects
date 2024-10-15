@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-public class Save
+public class Instance 
 {
     public void SaveToFile(string _targetFileName)
     {

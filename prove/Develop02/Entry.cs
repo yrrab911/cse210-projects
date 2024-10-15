@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-public class Write
+public class Entry
 {
     public List<string> _list = new List<string>
     {

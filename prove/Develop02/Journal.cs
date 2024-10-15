@@ -1,6 +1,6 @@
 using System;
 
-public class Load
+public class Journal
 {
     public string FileName()
     {

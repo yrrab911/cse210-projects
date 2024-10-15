@@ -12,26 +12,26 @@ public class Program
             _choose = int.Parse(Console.ReadLine());
             if (_choose == 1)
             {
-                Write _write1 = new Write();
+                Entry _write1 = new Entry();
                 _write1.writeToFile();
             }
 
             if (_choose == 2)
             {
-                Display _display1 = new Display();
+                Name _display1 = new Name();
                 _display1.Read();
             }
 
             if (_choose == 3)
             {
-                Load _load1 = new Load();
+                Journal _load1 = new Journal();
                 string _file = _load1.FileName();
                 _load1.LoadFile(_file);
             }
 
             if (_choose == 4)
             {
-                Save _save1 = new Save();
+                Instance _save1 = new Instance();
                 Console.WriteLine("Enter the name of the file to save to:");
                 string _targetFileName = Console.ReadLine();
                 _save1.SaveToFile(_targetFileName);
