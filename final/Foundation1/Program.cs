@@ -1,9 +1,47 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+namespace YouTubeTracker
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello Foundation1 World!");
+        static void Main(string[] args)
+        {
+            // Create video instances
+            var video1 = new Video("Amazing C# Tricks", "TechGuru", 300);
+            var video2 = new Video("How to Cook Perfect Pasta", "ChefMike", 480);
+            var video3 = new Video("10 Minute Yoga for Beginners", "YogaLife", 600);
+
+            // Add comments to videos
+            video1.AddComment(new Comment("Alice", "This was so helpful, thanks!"));
+            video1.AddComment(new Comment("Bob", "Great tricks, learned a lot."));
+            video1.AddComment(new Comment("Charlie", "Wow, C# is awesome!"));
+
+            video2.AddComment(new Comment("Dave", "Tried this recipe, turned out amazing!"));
+            video2.AddComment(new Comment("Eva", "Simple and easy to follow."));
+            video2.AddComment(new Comment("Frank", "Cooking made simple!"));
+
+            video3.AddComment(new Comment("Grace", "Loved this routine."));
+            video3.AddComment(new Comment("Hannah", "So relaxing, just what I needed."));
+            video3.AddComment(new Comment("Ian", "Perfect for a beginner like me!"));
+
+            // Store videos in a list
+            var videos = new List<Video> { video1, video2, video3 };
+
+            // Display information for each video
+            foreach (var video in videos)
+            {
+                Console.WriteLine($"Title: {video.Title}");
+                Console.WriteLine($"Author: {video.Author}");
+                Console.WriteLine($"Length: {video.Length} seconds");
+                Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()}");
+                Console.WriteLine("Comments:");
+                foreach (var comment in video.GetComments())
+                {
+                    Console.WriteLine($"- {comment.CommenterName}: {comment.CommentText}");
+                }
+                Console.WriteLine(new string('-', 40));
+            }
+        }
     }
 }
