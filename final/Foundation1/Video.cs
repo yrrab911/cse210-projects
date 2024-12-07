@@ -6,7 +6,7 @@ namespace YouTubeTracker
     {
         public string Title { get; }
         public string Author { get; }
-        public int Length { get; } // Length in seconds
+        public int Length { get; }
         private List<Comment> _comments;
 
         public Video(string title, string author, int length)
