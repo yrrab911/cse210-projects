@@ -9,13 +9,11 @@ namespace ProductOrderingSystem
             
             Address address1 = new Address("123 Main St", "Springfield", "IL", "USA");
             Address address2 = new Address("456 Elm St", "Toronto", "ON", "Canada");
-
-            Customer customer1 = new Customer("John Doe", address1);
-            Customer customer2 = new Customer("Jane Smith", address2);
-
             Product product1 = new Product("Widget", "W123", 10.50m, 2);
             Product product2 = new Product("Gadget", "G456", 15.75m, 1);
             Product product3 = new Product("Doohickey", "D789", 7.99m, 3);
+            Customer customer1 = new Customer("John Doe", address1);
+            Customer customer2 = new Customer("Jane Smith", address2);
 
             Order order1 = new Order(customer1);
             order1.AddProduct(product1);

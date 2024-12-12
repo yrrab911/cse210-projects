@@ -21,7 +21,7 @@ class Program
             Console.WriteLine(e.GetFullDetails());
             Console.WriteLine();
             Console.WriteLine(e.GetShortDescription());
-            Console.WriteLine("----------------------------");
+            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------/n");
         }
     }
 }

@@ -8,9 +8,12 @@ public class Cycling : Activity
         this.speed = speed;
     }
 
-    public override double GetDistance() => (speed / 60) * GetMinutes();
+    public override double GetDistance() 
+    => (speed / 60) * GetMinutes();
 
-    public override double GetSpeed() => speed;
+    public override double GetSpeed() 
+    => speed;
 
-    public override double GetPace() => 60 / speed;
+    public override double GetPace() 
+    => 60 / speed;
 }
